@@ -197,7 +197,8 @@ const translations = {
     "Something went wrong. Please try again.": "حدث خطأ ما. الرجاء المحاولة مرة أخرى",
     "Invalid email or password": "بريد إلكتروني أو كلمة مرور غير صحيحة",
     "Your account has been created successfully": "تم إنشاء حسابك بنجاح",
-    "Please check your email to verify your account": "الرجاء التحقق من بريدك الإلكتروني لتأكيد حسابك"
+    "Please check your email to verify your account": "الرجاء التحقق من بريدك الإلكتروني لتأكيد حسابك",
+    "All rights reserved.": "All rights reserved." 
 };
 
 // Function to set Arabic as default language

@@ -1,4 +1,5 @@
 /* Roomaity - Modern JavaScript Enhancements */
+import { initDarkModeToggle } from './modules/darkMode.js';
 
 // Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -241,40 +242,13 @@ function initLanguageSwitcher() {
   const languageToggle = document.getElementById('languageToggle');
   
   if (languageToggle) {
-    languageToggle.addEventListener('click', function() {
-      const currentLang = document.documentElement.getAttribute('lang');
-      const currentDir = document.documentElement.getAttribute('dir');
-      
-      if (currentLang === 'en') {
-        // Switch to Arabic
-        document.documentElement.setAttribute('lang', 'ar');
-        document.documentElement.setAttribute('dir', 'rtl');
-        languageToggle.innerHTML = '<i class="fas fa-globe"></i> English';
-        
-        // Add transition class to body
-        document.body.classList.add('lang-transition');
-        setTimeout(() => {
-          document.body.classList.remove('lang-transition');
-        }, 500);
-        
-        // Call translation function
-        translateToArabic();
-      } else {
-        // Switch to English
-        document.documentElement.setAttribute('lang', 'en');
-        document.documentElement.setAttribute('dir', 'ltr');
-        languageToggle.innerHTML = '<i class="fas fa-globe"></i> العربية';
-        
-        // Add transition class to body
-        document.body.classList.add('lang-transition');
-        setTimeout(() => {
-          document.body.classList.remove('lang-transition');
-        }, 500);
-        
-        // Call translation function
-        translateToEnglish();
-      }
-    });
+    // The event listener for language toggle is already set up 
+    // in enhanced-translations.js.
+    // This function can be kept for now if other specific initializations 
+    // related to the language switcher button itself are needed in the future,
+    // or removed if deemed completely redundant.
+    // For now, we'll leave the basic structure.
+    console.log("Language switcher in modern-script.js initialized (event listener in enhanced-translations.js handles clicks).");
   }
 }
 
@@ -905,117 +879,5 @@ function initAccessibility() {
         }
       }
     });
-  });
-}
-
-/**
- * Dark Mode Toggle
- */
-function initDarkModeToggle() {
-  const darkModeToggle = document.querySelector('.dark-mode-toggle');
-  
-  if (darkModeToggle) {
-    // Check system preference
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    // Check saved preference
-    const savedPreference = localStorage.getItem('darkMode');
-    
-    // Set initial state
-    if (savedPreference === 'dark' || (savedPreference !== 'light' && prefersDarkMode)) {
-      document.documentElement.classList.add('dark-mode');
-      darkModeToggle.classList.add('active');
-    }
-    
-    // Toggle dark mode
-    darkModeToggle.addEventListener('click', function() {
-      document.documentElement.classList.toggle('dark-mode');
-      this.classList.toggle('active');
-      
-      // Save preference
-      if (document.documentElement.classList.contains('dark-mode')) {
-        localStorage.setItem('darkMode', 'dark');
-      } else {
-        localStorage.setItem('darkMode', 'light');
-      }
-    });
-  }
-}
-
-/**
- * Translation Functions
- */
-function translateToArabic() {
-  // This would be replaced with actual translations from a JSON file or API
-  const translations = {
-    'Find Your Perfect Roommate in Saudi Arabia': 'ابحث عن شريك السكن المثالي في المملكة العربية السعودية',
-    'Connect with compatible roommates': 'تواصل مع شركاء سكن متوافقين',
-    'Male Section': 'قسم الرجال',
-    'Female Section': 'قسم النساء',
-    'Select City': 'اختر المدينة',
-    'Price Range': 'نطاق السعر',
-    'Find Rooms': 'ابحث عن غرف',
-    'Why Choose Roomaity?': 'لماذا تختار روميتي؟',
-    'Safe & Secure': 'آمن ومضمون',
-    'Culturally Appropriate': 'مناسب ثقافياً',
-    'Smart Matching': 'تطابق ذكي',
-    'How It Works': 'كيف يعمل',
-    'Create Profile': 'إنشاء ملف شخصي',
-    'List or Search': 'أضف أو ابحث',
-    'Connect': 'تواصل',
-    'Move In': 'انتقل للسكن',
-    'Featured Listings': 'القوائم المميزة',
-    'Male Listings': 'قوائم الرجال',
-    'Female Listings': 'قوائم النساء',
-    'For Males': 'للرجال',
-    'For Females': 'للنساء',
-    'View Details': 'عرض التفاصيل',
-    'View All Male Listings': 'عرض جميع قوائم الرجال',
-    'View All Female Listings': 'عرض جميع قوائم النساء',
-    'Find Your Ideal Roommate': 'ابحث عن شريك السكن المثالي',
-    'Male Roommates': 'شركاء سكن (رجال)',
-    'Female Roommates': 'شريكات سكن (نساء)',
-    'View Profile': 'عرض الملف الشخصي',
-    'What Our Users Say': 'ماذا يقول مستخدمونا',
-    'Ready to Find Your Perfect Roommate?': 'هل أنت مستعد للعثور على شريك السكن المثالي؟',
-    'Sign Up Now': 'سجل الآن',
-    'Quick Links': 'روابط سريعة',
-    'Resources': 'موارد',
-    'Contact Us': 'اتصل بنا',
-    'Home': 'الرئيسية',
-    'Login': 'تسجيل الدخول',
-    'All rights reserved.': 'جميع الحقوق محفوظة.'
-  };
-  
-  // Replace text content with Arabic translations
-  document.querySelectorAll('[data-translate]').forEach(element => {
-    const key = element.getAttribute('data-translate');
-    if (translations[key]) {
-      element.textContent = translations[key];
-    }
-  });
-  
-  // Add data-translate attributes to elements that need translation
-  if (!document.querySelector('[data-translate]')) {
-    addTranslateAttributes();
-  }
-}
-
-function translateToEnglish() {
-  // Restore original English text
-  document.querySelectorAll('[data-translate]').forEach(element => {
-    const key = element.getAttribute('data-translate');
-    element.textContent = key;
-  });
-}
-
-function addTranslateAttributes() {
-  // Add data-translate attributes to elements that need translation
-  const elementsToTranslate = document.querySelectorAll('h1, h2, h3, h4, h5, p, a, button, label, option');
-  
-  elementsToTranslate.forEach(element => {
-    if (element.textContent.trim()) {
-      element.setAttribute('data-translate', element.textContent.trim());
-    }
   });
 }

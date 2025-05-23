@@ -20,7 +20,6 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="modern-responsive.css">
     <link rel="stylesheet" href="modern-components.css">
-    <link rel="stylesheet" href="simplified-visual-styles.css">
 </head>
 <body>
     <!-- Skip to Content Link for Accessibility -->
@@ -66,7 +65,7 @@
                     </div>
                     
                     <button id="languageToggle" class="btn btn-sm btn-outline-secondary ml-lg-2">
-                        <i class="fas fa-globe"></i> English
+                        <i class="fas fa-globe" aria-hidden="true"></i> English
                     </button>
                 </div>
             </div>
@@ -762,7 +761,7 @@
                         <div class="card animate-on-scroll h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="testimonial-1.jpg" alt="User" class="rounded-circle mr-3" width="60" height="60">
+                                    <img src="testimonial-1.jpg" alt="Testimonial from user Abdullah" class="rounded-circle mr-3" width="60" height="60">
                                     <div>
                                         <h5 class="mb-0">Abdullah</h5>
                                         <p class="text-muted mb-0">Riyadh</p>
@@ -784,7 +783,7 @@
                         <div class="card animate-on-scroll h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="testimonial-2.jpg" alt="User" class="rounded-circle mr-3" width="60" height="60">
+                                    <img src="testimonial-2.jpg" alt="Testimonial from user Fatima" class="rounded-circle mr-3" width="60" height="60">
                                     <div>
                                         <h5 class="mb-0">Fatima</h5>
                                         <p class="text-muted mb-0">Jeddah</p>
@@ -806,7 +805,7 @@
                         <div class="card animate-on-scroll h-100">
                             <div class="card-body">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="testimonial-3.jpg" alt="User" class="rounded-circle mr-3" width="60" height="60">
+                                    <img src="testimonial-3.jpg" alt="Testimonial from user Omar" class="rounded-circle mr-3" width="60" height="60">
                                     <div>
                                         <h5 class="mb-0">Omar</h5>
                                         <p class="text-muted mb-0">Dammam</p>
@@ -851,10 +850,10 @@
                     <img src="logo-white.png" alt="Roomaity Logo" class="mb-4" height="40">
                     <p>Roomaity is the premier roommate finding platform in Saudi Arabia, connecting compatible roommates in a safe, culturally appropriate environment.</p>
                     <div class="d-flex mt-3">
-                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-white mr-3" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white mr-3" aria-label="Follow us on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white mr-3" aria-label="Follow us on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="text-white" aria-label="Follow us on LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 
@@ -907,35 +906,35 @@
     <!-- Mobile Bottom Navigation -->
     <div class="mobile-bottom-nav d-md-none">
         <a href="index.html" class="mobile-nav-item active">
-            <i class="fas fa-home"></i>
+            <i class="fas fa-home" aria-hidden="true"></i>
             <span data-translate="Home">Home</span>
         </a>
         <a href="search.html" class="mobile-nav-item">
-            <i class="fas fa-search"></i>
+            <i class="fas fa-search" aria-hidden="true"></i>
             <span data-translate="Search">Search</span>
         </a>
         <a href="messages.html" class="mobile-nav-item">
-            <i class="fas fa-comments"></i>
+            <i class="fas fa-comments" aria-hidden="true"></i>
             <span data-translate="Messages">Messages</span>
         </a>
         <a href="profile.html" class="mobile-nav-item">
-            <i class="fas fa-user"></i>
+            <i class="fas fa-user" aria-hidden="true"></i>
             <span data-translate="Profile">Profile</span>
         </a>
     </div>
     
     <!-- Dark Mode Toggle -->
-    <button class="dark-mode-toggle">
-        <i class="fas fa-moon"></i>
+    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" aria-hidden="true"></i>
     </button>
     
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
     
     <!-- JavaScript -->
     <script src="enhanced-translations.js"></script>
-    <script src="modern-script.js"></script>
+    <script src="modern-script.js" type="module"></script>
 </body>
 </html>
