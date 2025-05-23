@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Listing - Roomaity</title>
+    <meta name="description" content="List your room or apartment on Roomaity and find compatible roommates in Saudi Arabia.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="modern-responsive.css">
+    <link rel="stylesheet" href="modern-components.css">
+    <link rel="stylesheet" href="simplified-visual-styles.css">
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to content</a>
+    
+    <!-- Header -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="Roomaity Logo">
+                </a>
+                
+                <button id="navbarToggler" class="navbar-toggler" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div id="navbarMenu" class="navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-translate="Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="male-listings.html" data-translate="Male Listings">Male Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="female-listings.html" data-translate="Female Listings">Female Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="how-it-works.html" data-translate="How It Works">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" data-translate="About Us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" data-translate="Contact">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex ml-lg-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-expanded="false">
+                                <img src="male-profile-1.jpg" alt="Profile" class="rounded-circle mr-2" width="24" height="24">
+                                Ahmed
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user mr-2"></i> Profile</a></li>
+                                <li><a class="dropdown-item" href="messages.html"><i class="fas fa-comments mr-2"></i> Messages</a></li>
+                                <li><a class="dropdown-item" href="my-listings.html"><i class="fas fa-list mr-2"></i> My Listings</a></li>
+                                <li><a class="dropdown-item" href="settings.html"><i class="fas fa-cog mr-2"></i> Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button id="languageToggle" class="btn btn-sm btn-outline-secondary ml-lg-2">
+                        <i class="fas fa-globe"></i> العربية
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="pt-5">
+        <section class="py-5 mt-5">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-3 mb-4">
+                        <div class="card shadow-sm animate-on-scroll">
+                            <div class="card-body">
+                                <h5 class="card-title" data-translate="Listing Steps">Listing Steps</h5>
+                                <div class="listing-steps">
+                                    <div class="listing-step active">
+                                        <div class="listing-step-number">1</div>
+                                        <div class="listing-step-text" data-translate="Basic Info">Basic Info</div>
+                                    </div>
+                                    <div class="listing-step">
+                                        <div class="listing-step-number">2</div>
+                                        <div class="listing-step-text" data-translate="Details">Details</div>
+                                    </div>
+                                    <div class="listing-step">
+                                        <div class="listing-step-number">3</div>
+                                        <div class="listing-step-text" data-translate="Photos">Photos</div>
+                                    </div>
+                                    <div class="listing-step">
+                                        <div class="listing-step-number">4</div>
+                                        <div class="listing-step-text" data-translate="Preferences">Preferences</div>
+                                    </div>
+                                    <div class="listing-step">
+                                        <div class="listing-step-number">5</div>
+                                        <div class="listing-step-text" data-translate="Review">Review</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card shadow-sm mt-4 animate-on-scroll">
+                            <div class="card-body">
+                                <h5 class="card-title" data-translate="Tips">Tips</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success mr-2"></i>
+                                        <span data-translate="Be accurate with your location">Be accurate with your location</span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success mr-2"></i>
+                                        <span data-translate="Add clear, high-quality photos">Add clear, high-quality photos</span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success mr-2"></i>
+                                        <span data-translate="Be honest about amenities">Be honest about amenities</span>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="fas fa-check-circle text-success mr-2"></i>
+                                        <span data-translate="Set a fair price">Set a fair price</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-check-circle text-success mr-2"></i>
+                                        <span data-translate="Describe your ideal roommate">Describe your ideal roommate</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content -->
+                    <div class="col-lg-9">
+                        <div class="card shadow-sm animate-on-scroll">
+                            <div class="card-body p-4">
+                                <h1 class="h3 mb-4" data-translate="Create New Listing">Create New Listing</h1>
+                                
+                                <!-- Gender Selection -->
+                                <div class="gender-tabs mb-4">
+                                    <label class="form-label" data-translate="This listing is for">This listing is for:</label>
+                                    <ul class="nav nav-pills" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="male-listing-tab" data-toggle="pill" data-target="#male-listing" type="button" role="tab" aria-controls="male-listing" aria-selected="true" data-translate="Male Roommates">Male Roommates</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="female-listing-tab" data-toggle="pill" data-target="#female-listing" type="button" role="tab" aria-controls="female-listing" aria-selected="false" data-translate="Female Roommates">Female Roommates</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <form class="needs-validation" novalidate>
+                                    <div class="form-group">
+                                        <label for="listingTitle" data-translate="Listing Title">Listing Title</label>
+                                        <input type="text" class="form-control" id="listingTitle" placeholder="e.g., Private Room in Al Olaya" required>
+                                        <div class="invalid-feedback" data-translate="Please enter a title for your listing">Please enter a title for your listing</div>
+                                        <small class="form-text text-muted" data-translate="A clear, descriptive title helps your listing stand out">A clear, descriptive title helps your listing stand out</small>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="listingType" data-translate="Listing Type">Listing Type</label>
+                                                <select class="form-control" id="listingType" required>
+                                                    <option value="">Select type...</option>
+                                                    <option value="private_room">Private Room</option>
+                                                    <option value="shared_room">Shared Room</option>
+                                                    <option value="entire_apartment">Entire Apartment</option>
+                                                    <option value="looking_for_room">Looking for Room</option>
+                                                </select>
+                                                <div class="invalid-feedback" data-translate="Please select a listing type">Please select a listing type</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="price" data-translate="Monthly Rent (SAR)">Monthly Rent (SAR)</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">SAR</span>
+                                                    </div>
+                                                    <input type="number" class="form-control" id="price" placeholder="e.g., 2500" min="0" required>
+                                                </div>
+                                                <div class="invalid-feedback" data-translate="Please enter a valid price">Please enter a valid price</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="city" data-translate="City">City</label>
+                                                <select class="form-control" id="city" required>
+                                                    <option value="">Select city...</option>
+                                                    <option value="riyadh">Riyadh</option>
+                                                    <option value="jeddah">Jeddah</option>
+                                                    <option value="dammam">Dammam</option>
+                                                    <option value="mecca">Mecca</option>
+                                                    <option value="medina">Medina</option>
+                                                </select>
+                                                <div class="invalid-feedback" data-translate="Please select a city">Please select a city</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="district" data-translate="District/Neighborhood">District/Neighborhood</label>
+                                                <input type="text" class="form-control" id="district" placeholder="e.g., Al Olaya" required>
+                                                <div class="invalid-feedback" data-translate="Please enter your district or neighborhood">Please enter your district or neighborhood</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="address" data-translate="Address">Address</label>
+                                        <input type="text" class="form-control" id="address" placeholder="Street address" required>
+                                        <div class="invalid-feedback" data-translate="Please enter your address">Please enter your address</div>
+                                        <small class="form-text text-muted" data-translate="Your exact address will not be shown publicly until you approve a roommate">Your exact address will not be shown publicly until you approve a roommate</small>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="description" data-translate="Description">Description</label>
+                                        <textarea class="form-control" id="description" rows="5" placeholder="Describe your place, nearby amenities, rules, etc." required></textarea>
+                                        <div class="invalid-feedback" data-translate="Please provide a description">Please provide a description</div>
+                                        <small class="form-text text-muted" data-translate="Minimum 100 characters">Minimum 100 characters</small>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label data-translate="Availability Date">Availability Date</label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="date" class="form-control" id="availabilityDate" required>
+                                                <div class="invalid-feedback" data-translate="Please select an availability date">Please select an availability date</div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <select class="form-control" id="minimumStay" required>
+                                                    <option value="">Minimum stay...</option>
+                                                    <option value="1">1 month</option>
+                                                    <option value="3">3 months</option>
+                                                    <option value="6">6 months</option>
+                                                    <option value="12">1 year</option>
+                                                </select>
+                                                <div class="invalid-feedback" data-translate="Please select a minimum stay period">Please select a minimum stay period</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between mt-4">
+                                        <button type="button" class="btn btn-outline-secondary" onclick="window.history.back()">
+                                            <i class="fas fa-arrow-left mr-2"></i> <span data-translate="Cancel">Cancel</span>
+                                        </button>
+                                        <button type="submit" class="btn btn-primary">
+                                            <span data-translate="Next: Details">Next: Details</span> <i class="fas fa-arrow-right ml-2"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="logo-white.png" alt="Roomaity Logo" class="mb-4" height="40">
+                    <p>Roomaity is the premier roommate finding platform in Saudi Arabia, connecting compatible roommates in a safe, culturally appropriate environment.</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="footer-title" data-translate="Quick Links">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="Home">Home</a></li>
+                        <li><a href="male-listings.html" data-translate="Male Listings">Male Listings</a></li>
+                        <li><a href="female-listings.html" data-translate="Female Listings">Female Listings</a></li>
+                        <li><a href="how-it-works.html" data-translate="How It Works">How It Works</a></li>
+                        <li><a href="about.html" data-translate="About Us">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="footer-title" data-translate="Resources">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="safety-tips.html" data-translate="Safety Tips">Safety Tips</a></li>
+                        <li><a href="roommate-agreement.html" data-translate="Roommate Agreement">Roommate Agreement</a></li>
+                        <li><a href="faq.html" data-translate="FAQ">FAQ</a></li>
+                        <li><a href="blog.html" data-translate="Blog">Blog</a></li>
+                        <li><a href="privacy-policy.html" data-translate="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="footer-title" data-translate="Contact Us">Contact Us</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Riyadh, Saudi Arabia</li>
+                        <li><i class="fas fa-phone mr-2"></i> +966 12 345 6789</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@roomaity.com</li>
+                    </ul>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Roomaity. <span data-translate="All rights reserved.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav d-md-none">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span data-translate="Home">Home</span>
+        </a>
+        <a href="search.html" class="mobile-nav-item">
+            <i class="fas fa-search"></i>
+            <span data-translate="Search">Search</span>
+        </a>
+        <a href="messages.html" class="mobile-nav-item">
+            <i class="fas fa-comments"></i>
+            <span data-translate="Messages">Messages</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item">
+            <i class="fas fa-user"></i>
+            <span data-translate="Profile">Profile</span>
+        </a>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="modern-script.js"></script>
+    <!-- JavaScript -->
+    <script src="enhanced-translations.js"></script>
+    <script src="modern-script.js"></script>
+</body>
+</html>

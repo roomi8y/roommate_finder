@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Roomaity</title>
+    <meta name="description" content="Login to your Roomaity account to find or list rooms and connect with potential roommates in Saudi Arabia.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="modern-responsive.css">
+    <link rel="stylesheet" href="modern-components.css">
+    <link rel="stylesheet" href="simplified-visual-styles.css">
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to content</a>
+    
+    <!-- Header -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="Roomaity Logo">
+                </a>
+                
+                <button id="navbarToggler" class="navbar-toggler" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div id="navbarMenu" class="navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-translate="Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="male-listings.html" data-translate="Male Listings">Male Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="female-listings.html" data-translate="Female Listings">Female Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="how-it-works.html" data-translate="How It Works">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" data-translate="About Us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" data-translate="Contact">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex ml-lg-3">
+                        <a href="login.html" class="btn btn-outline-primary mr-2 active" data-translate="Login">Login</a>
+                        <a href="signup.html" class="btn btn-primary" data-translate="Sign Up">Sign Up</a>
+                    </div>
+                    
+                    <button id="languageToggle" class="btn btn-sm btn-outline-secondary ml-lg-2">
+                        <i class="fas fa-globe"></i> العربية
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="pt-5">
+        <section class="py-5 mt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                        <div class="card shadow-lg animate-on-scroll">
+                            <div class="card-body p-5">
+                                <div class="text-center mb-4">
+                                    <h1 class="h3" data-translate="Login to Your Account">Login to Your Account</h1>
+                                    <p class="text-muted" data-translate="Welcome back to Roomaity">Welcome back to Roomaity</p>
+                                </div>
+                                
+                                <!-- Gender Tabs -->
+                                <div class="gender-tabs mb-4">
+                                    <ul class="nav nav-pills" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="male-login-tab" data-toggle="pill" data-target="#male-login" type="button" role="tab" aria-controls="male-login" aria-selected="true" data-translate="Male Login">Male Login</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="female-login-tab" data-toggle="pill" data-target="#female-login" type="button" role="tab" aria-controls="female-login" aria-selected="false" data-translate="Female Login">Female Login</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="tab-content">
+                                    <div class="tab-pane fade show active" id="male-login" role="tabpanel" aria-labelledby="male-login-tab">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="form-group">
+                                                <label for="maleEmail" data-translate="Email Address">Email Address</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                                    </div>
+                                                    <input type="email" class="form-control" id="maleEmail" placeholder="your.email@example.com" required>
+                                                </div>
+                                                <div class="invalid-feedback" data-translate="Please enter a valid email address">Please enter a valid email address</div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="malePassword" data-translate="Password">Password</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="malePassword" placeholder="••••••••" required>
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="invalid-feedback" data-translate="Please enter your password">Please enter your password</div>
+                                            </div>
+                                            
+                                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="maleRemember">
+                                                    <label class="form-check-label" for="maleRemember" data-translate="Remember me">
+                                                        Remember me
+                                                    </label>
+                                                </div>
+                                                <a href="forgot-password.html" class="text-primary" data-translate="Forgot Password?">Forgot Password?</a>
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-primary btn-block btn-lg" data-translate="Login">Login</button>
+                                            
+                                            <div class="text-center mt-4">
+                                                <p class="mb-0" data-translate="Don't have an account?">Don't have an account? <a href="signup.html" class="text-primary" data-translate="Sign Up">Sign Up</a></p>
+                                            </div>
+                                        </form>
+                                        
+                                        <div class="divider my-4">
+                                            <span class="divider-text" data-translate="or login with">or login with</span>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button class="btn btn-outline-secondary btn-block">
+                                                    <i class="fab fa-google mr-2"></i> Google
+                                                </button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button class="btn btn-outline-secondary btn-block">
+                                                    <i class="fab fa-facebook-f mr-2"></i> Facebook
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-pane fade" id="female-login" role="tabpanel" aria-labelledby="female-login-tab">
+                                        <form class="needs-validation" novalidate>
+                                            <div class="form-group">
+                                                <label for="femaleEmail" data-translate="Email Address">Email Address</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                                    </div>
+                                                    <input type="email" class="form-control" id="femaleEmail" placeholder="your.email@example.com" required>
+                                                </div>
+                                                <div class="invalid-feedback" data-translate="Please enter a valid email address">Please enter a valid email address</div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="femalePassword" data-translate="Password">Password</label>
+                                                <div class="input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                                    </div>
+                                                    <input type="password" class="form-control" id="femalePassword" placeholder="••••••••" required>
+                                                    <div class="input-group-append">
+                                                        <button class="btn btn-outline-secondary toggle-password" type="button">
+                                                            <i class="fas fa-eye"></i>
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <div class="invalid-feedback" data-translate="Please enter your password">Please enter your password</div>
+                                            </div>
+                                            
+                                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="femaleRemember">
+                                                    <label class="form-check-label" for="femaleRemember" data-translate="Remember me">
+                                                        Remember me
+                                                    </label>
+                                                </div>
+                                                <a href="forgot-password.html" class="text-primary" data-translate="Forgot Password?">Forgot Password?</a>
+                                            </div>
+                                            
+                                            <button type="submit" class="btn btn-primary btn-block btn-lg" data-translate="Login">Login</button>
+                                            
+                                            <div class="text-center mt-4">
+                                                <p class="mb-0" data-translate="Don't have an account?">Don't have an account? <a href="signup.html" class="text-primary" data-translate="Sign Up">Sign Up</a></p>
+                                            </div>
+                                        </form>
+                                        
+                                        <div class="divider my-4">
+                                            <span class="divider-text" data-translate="or login with">or login with</span>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <button class="btn btn-outline-secondary btn-block">
+                                                    <i class="fab fa-google mr-2"></i> Google
+                                                </button>
+                                            </div>
+                                            <div class="col-6">
+                                                <button class="btn btn-outline-secondary btn-block">
+                                                    <i class="fab fa-facebook-f mr-2"></i> Facebook
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4">
+                            <p class="text-muted" data-translate="By logging in, you agree to our">By logging in, you agree to our <a href="terms.html" data-translate="Terms of Service">Terms of Service</a> and <a href="privacy-policy.html" data-translate="Privacy Policy">Privacy Policy</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="logo-white.png" alt="Roomaity Logo" class="mb-4" height="40">
+                    <p>Roomaity is the premier roommate finding platform in Saudi Arabia, connecting compatible roommates in a safe, culturally appropriate environment.</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="footer-title" data-translate="Quick Links">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="Home">Home</a></li>
+                        <li><a href="male-listings.html" data-translate="Male Listings">Male Listings</a></li>
+                        <li><a href="female-listings.html" data-translate="Female Listings">Female Listings</a></li>
+                        <li><a href="how-it-works.html" data-translate="How It Works">How It Works</a></li>
+                        <li><a href="about.html" data-translate="About Us">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="footer-title" data-translate="Resources">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="safety-tips.html" data-translate="Safety Tips">Safety Tips</a></li>
+                        <li><a href="roommate-agreement.html" data-translate="Roommate Agreement">Roommate Agreement</a></li>
+                        <li><a href="faq.html" data-translate="FAQ">FAQ</a></li>
+                        <li><a href="blog.html" data-translate="Blog">Blog</a></li>
+                        <li><a href="privacy-policy.html" data-translate="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="footer-title" data-translate="Contact Us">Contact Us</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Riyadh, Saudi Arabia</li>
+                        <li><i class="fas fa-phone mr-2"></i> +966 12 345 6789</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@roomaity.com</li>
+                    </ul>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Roomaity. <span data-translate="All rights reserved.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav d-md-none">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span data-translate="Home">Home</span>
+        </a>
+        <a href="search.html" class="mobile-nav-item">
+            <i class="fas fa-search"></i>
+            <span data-translate="Search">Search</span>
+        </a>
+        <a href="messages.html" class="mobile-nav-item">
+            <i class="fas fa-comments"></i>
+            <span data-translate="Messages">Messages</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item">
+            <i class="fas fa-user"></i>
+            <span data-translate="Profile">Profile</span>
+        </a>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="modern-script.js"></script>
+    
+    <script>
+        // Toggle password visibility
+        document.querySelectorAll('.toggle-password').forEach(button => {
+            button.addEventListener('click', function() {
+                const passwordInput = this.closest('.input-group').querySelector('input');
+                const icon = this.querySelector('i');
+                
+                if (passwordInput.type === 'password') {
+                    passwordInput.type = 'text';
+                    icon.classList.remove('fa-eye');
+                    icon.classList.add('fa-eye-slash');
+                } else {
+                    passwordInput.type = 'password';
+                    icon.classList.remove('fa-eye-slash');
+                    icon.classList.add('fa-eye');
+                }
+            });
+        });
+    </script>
+    <!-- JavaScript -->
+    <script src="enhanced-translations.js"></script>
+    <script src="modern-script.js"></script>
+</body>
+</html>

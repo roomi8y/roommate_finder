@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Roomaity</title>
+    <meta name="description" content="Manage your Roomaity profile, view your listings, and connect with potential roommates in Saudi Arabia.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="modern-responsive.css">
+    <link rel="stylesheet" href="modern-components.css">
+    <link rel="stylesheet" href="simplified-visual-styles.css">
+</head>
+<body>
+    <!-- Skip to Content Link for Accessibility -->
+    <a href="#main-content" class="sr-only sr-only-focusable">Skip to content</a>
+    
+    <!-- Header -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="logo.png" alt="Roomaity Logo">
+                </a>
+                
+                <button id="navbarToggler" class="navbar-toggler" type="button" aria-label="Toggle navigation" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <div id="navbarMenu" class="navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html" data-translate="Home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="male-listings.html" data-translate="Male Listings">Male Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="female-listings.html" data-translate="Female Listings">Female Listings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="how-it-works.html" data-translate="How It Works">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html" data-translate="About Us">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html" data-translate="Contact">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex ml-lg-3">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="userDropdown" data-toggle="dropdown" aria-expanded="false">
+                                <img src="male-profile-1.jpg" alt="Profile" class="rounded-circle mr-2" width="24" height="24">
+                                Ahmed
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <li><a class="dropdown-item" href="profile.html"><i class="fas fa-user mr-2"></i> Profile</a></li>
+                                <li><a class="dropdown-item" href="messages.html"><i class="fas fa-comments mr-2"></i> Messages</a></li>
+                                <li><a class="dropdown-item" href="my-listings.html"><i class="fas fa-list mr-2"></i> My Listings</a></li>
+                                <li><a class="dropdown-item" href="settings.html"><i class="fas fa-cog mr-2"></i> Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="login.html"><i class="fas fa-sign-out-alt mr-2"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <button id="languageToggle" class="btn btn-sm btn-outline-secondary ml-lg-2">
+                        <i class="fas fa-globe"></i> العربية
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content" class="pt-5">
+        <section class="py-5 mt-5">
+            <div class="container">
+                <!-- Profile Header -->
+                <div class="profile-header animate-on-scroll">
+                    <div class="profile-avatar">
+                        <img src="male-profile-1.jpg" alt="Ahmed" class="profile-avatar">
+                    </div>
+                    <div class="profile-info">
+                        <h1 class="profile-name">Ahmed, 28</h1>
+                        <p class="profile-subtitle">Software Engineer • Riyadh, Saudi Arabia</p>
+                        
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <div class="profile-stat-value">4.9</div>
+                                <div class="profile-stat-label">Rating</div>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="profile-stat-value">12</div>
+                                <div class="profile-stat-label">Reviews</div>
+                            </div>
+                            <div class="profile-stat">
+                                <div class="profile-stat-value">2</div>
+                                <div class="profile-stat-label">Listings</div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-badges">
+                            <div class="profile-badge profile-badge-verified">
+                                <i class="fas fa-check mr-1"></i> Verified
+                            </div>
+                            <div class="profile-badge profile-badge-premium">
+                                <i class="fas fa-star mr-1"></i> Premium
+                            </div>
+                        </div>
+                        
+                        <div class="profile-actions">
+                            <a href="messages.html" class="btn btn-primary profile-action">
+                                <i class="fas fa-comments mr-2"></i> Message
+                            </a>
+                            <button class="btn btn-outline-primary profile-action profile-follow-btn">
+                                <i class="fas fa-user-plus mr-2"></i> Follow
+                            </button>
+                            <button class="btn btn-outline-secondary profile-action">
+                                <i class="fas fa-share-alt mr-2"></i> Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Profile Tabs -->
+                <div class="profile-tabs animate-on-scroll">
+                    <button class="profile-tab active" data-target="#about">About</button>
+                    <button class="profile-tab" data-target="#listings">Listings</button>
+                    <button class="profile-tab" data-target="#reviews">Reviews</button>
+                    <button class="profile-tab" data-target="#preferences">Preferences</button>
+                </div>
+                
+                <!-- Tab Content -->
+                <div class="tab-content">
+                    <!-- About Tab -->
+                    <div id="about" class="profile-tab-content active">
+                        <div class="profile-section animate-on-scroll">
+                            <h2 class="profile-section-title">About Me</h2>
+                            <div class="profile-section-content">
+                                <p>Hi there! I'm Ahmed, a 28-year-old software engineer living in Riyadh. I'm originally from Jeddah but moved to Riyadh for work three years ago. I work for a tech company developing mobile applications.</p>
+                                <p>I'm a clean, organized, and respectful roommate. I enjoy cooking, reading, and playing video games in my free time. I'm generally quiet during the week as I focus on work, but I enjoy socializing on weekends.</p>
+                                <p>I'm looking for a roommate who is also professional, clean, and respectful of privacy. I prefer someone who works in a similar field or has similar interests.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section animate-on-scroll">
+                            <h2 class="profile-section-title">Lifestyle</h2>
+                            <div class="profile-section-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-smoking-ban text-danger mr-3 fa-lg"></i>
+                                                <span>Non-smoker</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-moon text-primary mr-3 fa-lg"></i>
+                                                <span>Early sleeper (10-11 PM)</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-briefcase text-secondary mr-3 fa-lg"></i>
+                                                <span>Works 9 AM - 6 PM</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled">
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-utensils text-success mr-3 fa-lg"></i>
+                                                <span>Cooks regularly</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-broom text-info mr-3 fa-lg"></i>
+                                                <span>Very clean</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-users text-warning mr-3 fa-lg"></i>
+                                                <span>Occasional guests</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="profile-section animate-on-scroll">
+                            <h2 class="profile-section-title">Interests</h2>
+                            <div class="profile-section-content">
+                                <div class="d-flex flex-wrap">
+                                    <span class="badge bg-primary text-white p-2 m-1">Technology</span>
+                                    <span class="badge bg-primary text-white p-2 m-1">Reading</span>
+                                    <span class="badge bg-primary text-white p-2 m-1">Cooking</span>
+                                    <span class="badge bg-primary text-white p-2 m-1">Video Games</span>
+                                    <span class="badge bg-primary text-white p-2 m-1">Hiking</span>
+                                    <span class="badge bg-primary text-white p-2 m-1">Photography</span>
+                                    <span class="badge bg-primary text-white p-2 m-1">Coffee</span>
+                                    <span class="badge bg-primary text-white p-2 m-1">Movies</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Listings Tab -->
+                    <div id="listings" class="profile-tab-content">
+                        <div class="profile-section animate-on-scroll">
+                            <h2 class="profile-section-title">My Listings</h2>
+                            <div class="row">
+                                <!-- Listing 1 -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="listing-card">
+                                        <div class="listing-card-badge listing-card-badge-male">For Males</div>
+                                        <img src="male-room-1.jpg" alt="Private Room in Al Olaya" class="listing-card-img">
+                                        <div class="listing-card-body">
+                                            <div class="listing-card-price">2,500 SAR <span class="text-muted">/month</span></div>
+                                            <h3 class="listing-card-title">Private Room in Al Olaya</h3>
+                                            <div class="listing-card-location">
+                                                <i class="fas fa-map-marker-alt"></i> Riyadh, Saudi Arabia
+                                            </div>
+                                            <div class="listing-card-amenities">
+                                                <div class="listing-card-amenity">
+                                                    <i class="fas fa-bed"></i> 1 Bed
+                                                </div>
+                                                <div class="listing-card-amenity">
+                                                    <i class="fas fa-bath"></i> Private Bath
+                                                </div>
+                                                <div class="listing-card-amenity">
+                                                    <i class="fas fa-wifi"></i> WiFi
+                                                </div>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="listing-detail.html" class="btn btn-primary flex-grow-1 mr-2">View</a>
+                                                <a href="edit-listing.html" class="btn btn-outline-primary flex-grow-1">Edit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Listing 2 -->
+                                <div class="col-md-6 mb-4">
+                                    <div class="listing-card">
+                                        <div class="listing-card-badge listing-card-badge-male">For Males</div>
+                                        <img src="male-room-2.jpg" alt="Shared Apartment in Al Hamra" class="listing-card-img">
+                                        <div class="listing-card-body">
+                                            <div class="listing-card-price">3,200 SAR <span class="text-muted">/month</span></div>
+                                            <h3 class="listing-card-title">Shared Apartment in Al Hamra</h3>
+                                            <div class="listing-card-location">
+                                                <i class="fas fa-map-marker-alt"></i> Riyadh, Saudi Arabia
+                                            </div>
+                                            <div class="listing-card-amenities">
+                                                <div class="listing-card-amenity">
+                                                    <i class="fas fa-bed"></i> 2 Beds
+                                                </div>
+                                                <div class="listing-card-amenity">
+                                                    <i class="fas fa-bath"></i> Shared Bath
+                                                </div>
+                                                <div class="listing-card-amenity">
+                                                    <i class="fas fa-utensils"></i> Kitchen
+                                                </div>
+                                            </div>
+                                            <div class="d-flex">
+                                                <a href="listing-detail.html" class="btn btn-primary flex-grow-1 mr-2">View</a>
+                                                <a href="edit-listing.html" class="btn btn-outline-primary flex-grow-1">Edit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-4">
+                                <a href="create-listing.html" class="btn btn-primary">
+                                    <i class="fas fa-plus mr-2"></i> Add New Listing
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reviews Tab -->
+                    <div id="reviews" class="profile-tab-content">
+                        <div class="profile-section animate-on-scroll">
+                            <h2 class="profile-section-title">Reviews (12)</h2>
+                            <div class="profile-section-content">
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="display-4 mr-3 text-primary">4.9</div>
+                                    <div>
+                                        <div class="text-warning mb-2">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <div class="text-muted">Based on 12 reviews</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="review-list">
+                                    <!-- Review 1 -->
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="male-profile-2.jpg" alt="Mohammed" class="rounded-circle mr-3" width="50" height="50">
+                                                <div>
+                                                    <h5 class="mb-0">Mohammed</h5>
+                                                    <div class="text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <small class="text-muted">2 months ago</small>
+                                                </div>
+                                            </div>
+                                            <p class="card-text">Ahmed is an excellent roommate! Very clean, respectful, and friendly. He's quiet during the week but we often hang out on weekends. The apartment is always well-maintained and he's very considerate about shared spaces.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Review 2 -->
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="male-profile-3.jpg" alt="Khalid" class="rounded-circle mr-3" width="50" height="50">
+                                                <div>
+                                                    <h5 class="mb-0">Khalid</h5>
+                                                    <div class="text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star-half-alt"></i>
+                                                    </div>
+                                                    <small class="text-muted">4 months ago</small>
+                                                </div>
+                                            </div>
+                                            <p class="card-text">I stayed with Ahmed for 6 months and had a great experience. He's very organized and keeps the place clean. He's also a great cook and sometimes shared meals. The only minor issue was that he sometimes had friends over without much notice, but he was always respectful about noise levels.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Review 3 -->
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <img src="male-profile-4.jpg" alt="Saad" class="rounded-circle mr-3" width="50" height="50">
+                                                <div>
+                                                    <h5 class="mb-0">Saad</h5>
+                                                    <div class="text-warning">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                    <small class="text-muted">6 months ago</small>
+                                                </div>
+                                            </div>
+                                            <p class="card-text">Ahmed is the perfect roommate! He's clean, quiet, and respectful. We had similar work schedules so it worked out really well. The apartment was always in great condition and he was very prompt with his share of the bills. Highly recommend!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center mt-4">
+                                    <button class="btn btn-outline-primary">Load More Reviews</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Preferences Tab -->
+                    <div id="preferences" class="profile-tab-content">
+                        <div class="profile-section animate-on-scroll">
+                            <h2 class="profile-section-title">Roommate Preferences</h2>
+                            <div class="profile-section-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5 class="mb-3">I'm Looking For</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-user text-primary mr-3 fa-lg"></i>
+                                                <span>Male roommate</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-briefcase text-primary mr-3 fa-lg"></i>
+                                                <span>Professional (25-35 years old)</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-smoking-ban text-primary mr-3 fa-lg"></i>
+                                                <span>Non-smoker</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-broom text-primary mr-3 fa-lg"></i>
+                                                <span>Clean and organized</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5 class="mb-3">Preferred Location</h5>
+                                        <ul class="list-unstyled">
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-map-marker-alt text-danger mr-3 fa-lg"></i>
+                                                <span>Riyadh - Al Olaya district</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-map-marker-alt text-danger mr-3 fa-lg"></i>
+                                                <span>Riyadh - Al Hamra district</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-building text-secondary mr-3 fa-lg"></i>
+                                                <span>Modern apartment building</span>
+                                            </li>
+                                            <li class="d-flex align-items-center mb-3">
+                                                <i class="fas fa-car text-secondary mr-3 fa-lg"></i>
+                                                <span>Close to public transportation</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <h5 class="mb-3">Budget</h5>
+                                    <div class="d-flex align-items-center">
+                                        <i class="fas fa-money-bill-wave text-success mr-3 fa-lg"></i>
+                                        <span>2,000 - 3,500 SAR per month</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <h5 class="mb-3">Additional Notes</h5>
+                                    <p>I'm looking for a long-term arrangement (at least 1 year). I prefer someone who has a similar work schedule (9-5) and is respectful of quiet hours during weeknights. I enjoy occasional social activities with roommates but also value personal space and privacy.</p>
+                                </div>
+                                
+                                <div class="text-center mt-4">
+                                    <a href="edit-preferences.html" class="btn btn-primary">
+                                        <i class="fas fa-edit mr-2"></i> Edit Preferences
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="logo-white.png" alt="Roomaity Logo" class="mb-4" height="40">
+                    <p>Roomaity is the premier roommate finding platform in Saudi Arabia, connecting compatible roommates in a safe, culturally appropriate environment.</p>
+                    <div class="d-flex mt-3">
+                        <a href="#" class="text-white mr-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white mr-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="footer-title" data-translate="Quick Links">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="Home">Home</a></li>
+                        <li><a href="male-listings.html" data-translate="Male Listings">Male Listings</a></li>
+                        <li><a href="female-listings.html" data-translate="Female Listings">Female Listings</a></li>
+                        <li><a href="how-it-works.html" data-translate="How It Works">How It Works</a></li>
+                        <li><a href="about.html" data-translate="About Us">About Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-2 col-6 mb-4 mb-md-0">
+                    <h5 class="footer-title" data-translate="Resources">Resources</h5>
+                    <ul class="footer-links">
+                        <li><a href="safety-tips.html" data-translate="Safety Tips">Safety Tips</a></li>
+                        <li><a href="roommate-agreement.html" data-translate="Roommate Agreement">Roommate Agreement</a></li>
+                        <li><a href="faq.html" data-translate="FAQ">FAQ</a></li>
+                        <li><a href="blog.html" data-translate="Blog">Blog</a></li>
+                        <li><a href="privacy-policy.html" data-translate="Privacy Policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-4">
+                    <h5 class="footer-title" data-translate="Contact Us">Contact Us</h5>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Riyadh, Saudi Arabia</li>
+                        <li><i class="fas fa-phone mr-2"></i> +966 12 345 6789</li>
+                        <li><i class="fas fa-envelope mr-2"></i> info@roomaity.com</li>
+                    </ul>
+                    <form class="mt-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Roomaity. <span data-translate="All rights reserved.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-bottom-nav d-md-none">
+        <a href="index.html" class="mobile-nav-item">
+            <i class="fas fa-home"></i>
+            <span data-translate="Home">Home</span>
+        </a>
+        <a href="search.html" class="mobile-nav-item">
+            <i class="fas fa-search"></i>
+            <span data-translate="Search">Search</span>
+        </a>
+        <a href="messages.html" class="mobile-nav-item">
+            <i class="fas fa-comments"></i>
+            <span data-translate="Messages">Messages</span>
+        </a>
+        <a href="profile.html" class="mobile-nav-item active">
+            <i class="fas fa-user"></i>
+            <span data-translate="Profile">Profile</span>
+        </a>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <button class="dark-mode-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- JavaScript -->
+    <script src="modern-script.js"></script>
+    <!-- JavaScript -->
+    <script src="enhanced-translations.js"></script>
+    <script src="modern-script.js"></script>
+</body>
+</html>
